@@ -5,13 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <title>Shoot Em Up</title>
 </head>
 
 <body>
-    <canvas>
+    <div class="fixed text-white text-sm ml-3 mt-1 select-none font-bold"><span>Score: </span><span id="scoreEl">0</span></div>
 
-    </canvas>
+    <div class="fixed inset-0 flex items-center justify-center" id="modalEl">
+        <div class="bg-white max-w-md w-full p-6 text-center">
+            <h1 class="text-4xl font-bold leading-none" id="bigScoreEl">0</h1>
+            <p class="text-sm text-gray-700">Points</p>
+            <div class="mt-4">
+                <button class="bg-blue-500 text-white w-full py-3 rounded-full" id="startGameBtn">Start Game</button>
+            </div>
+            <p class="text-sm mt-5 flex">
+                Created by Khabubu Ndivhuwo
+                <a href="https://github.com/khabz" class="ml-3"><i data-feather="github"></i></a>
+                <a href="https://twitter.com/khabubundivhu" class="ml-3"><i data-feather="twitter"></i></a>
+            </p>
+        </div>
+    </div>
+    <canvas></canvas>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        feather.replace()
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
     <script src="index.js"></script>
 </body>
